@@ -26,6 +26,7 @@ export const fetchSingleCocktail = createAsyncThunk(
 export const fetchSearchCocktail = createAsyncThunk(
 	'cocktails/fetchSearchCocktail',
 	async ({ searchName }) => {
+		console.log(searchName)
 		return fetch(
 			`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchName}`,
 			{

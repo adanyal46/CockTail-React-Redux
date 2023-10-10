@@ -11,7 +11,7 @@ function SingleCocktail() {
 	const dispatch = useDispatch()
 	useEffect(() => {
 		dispatch(fetchSingleCocktail(id))
-	}, [dispatch])
+	}, [dispatch, id])
 	useEffect(() => {
 		if (cocktail?.length > 0) {
 			const {
@@ -73,6 +73,7 @@ function SingleCocktail() {
 										objectFit: 'cover',
 										borderRadius: '5px',
 									}}
+									alt={name}
 								/>
 							</Col>
 							<Col xs={24} md={10}>
